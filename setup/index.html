@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Device Portal Header</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- ================= TOP BLUE BAR ================= -->
+<div class="bg-[#0033a0]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- LEFT: LOGO + TABS -->
+      <div class="flex items-center gap-6">
+
+        <!-- Logo -->
+        <div class="text-white font-extrabold text-xl tracking-wide">
+          Brothers Printer
+        </div>
+
+        <!-- For Home / For Business Tabs -->
+        <div class="flex items-end">
+          <button class="bg-white text-black px-4 py-2 text-sm font-semibold rounded-t">
+            For Home
+          </button>
+          <button class="text-white px-4 py-2 text-sm font-semibold">
+            For Business
+          </button>
+        </div>
+      </div>
+
+      <!-- CENTER: SEARCH BAR -->
+      <div class="hidden md:block w-[440px]">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search device-portal.com here..."
+            class="w-full px-5 py-2 rounded-full text-sm focus:outline-none"
+          />
+          <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+        </div>
+      </div>
+
+      <!-- RIGHT: ICONS + ACCOUNT -->
+      <div class="flex items-center gap-6 text-white text-sm">
+
+        <i class="fas fa-wheelchair text-lg cursor-pointer"></i>
+        <i class="fas fa-play-circle text-lg cursor-pointer"></i>
+
+        <!-- Cart -->
+        <div class="relative cursor-pointer">
+          <i class="fas fa-shopping-cart text-lg"></i>
+          <span class="absolute -top-2 -right-2 bg-orange-500 text-xs rounded-full px-1">0</span>
+        </div>
+
+        <!-- Account -->
+        <div class="flex items-center gap-1 cursor-pointer">
+          <i class="fas fa-user-circle text-lg"></i>
+          <span class="font-semibold">Account</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= WHITE NAV BAR ================= -->
+<div class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center gap-10 h-14 text-sm font-semibold text-gray-800">
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0033a0]">
+        Products <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0033a0]">
+        Supplies <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0033a0]">
+        Help <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0033a0]">
+        Inspiration <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0033a0]">
+        Special Offers
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0033a0]">
+        Certified Refurbished Products
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0033a0]">
+        Product Registration
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO SECTION ================= -->
+<div class="hero-section py-12 border-b border-gray-200">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col md:flex-row items-center gap-8">
+
+      <div class="flex-1">
+        <div class="inline-block bg-white border px-4 py-1 text-sm font-bold text-gray-600 mb-4 uppercase">
+          Configuration & Troubleshooting
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-light mb-4">
+          Setup & Assistance for <br>
+          <strong class="font-extrabold text-[#005eb8]">Laser & Inkjet Printers</strong>
+        </h1>
+
+        <p class="text-xl text-gray-700 mb-6">
+          Identify your device to download software, view manuals, or resolve connectivity issues.
+        </p>
+
+        <div class="bg-white p-6 rounded-lg border mb-6">
+          <p class="text-sm font-bold mb-3 uppercase border-b pb-2">
+            Common Issues We Resolve:
+          </p>
+          <div class="grid grid-cols-2 gap-3 text-lg">
+            <div><i class="fas fa-check-circle text-green-600"></i> Printer Offline</div>
+            <div><i class="fas fa-check-circle text-green-600"></i> Wi-Fi Setup</div>
+            <div><i class="fas fa-check-circle text-green-600"></i> Software Errors</div>
+            <div><i class="fas fa-check-circle text-green-600"></i> Sleep Mode</div>
+          </div>
+        </div>
+
+        <input id="modelInput" placeholder="Enter Model Name (e.g. MFC-L2710DW)"
+          class="w-full px-6 py-4 border-2 rounded-md text-2xl mb-3">
+
+        <button onclick="startSetup()" class="bg-[#005eb8] text-white px-10 py-4 rounded-md text-2xl font-bold">
+          CLICK HERE TO PRINTER SETUP
+        </button>
+
+      </div>
+
+      <div class="flex-1">
+        <img src="/Images/Img.png"
+             class="rounded-lg border-8 border-white shadow-2xl">
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- Quick Solutions Grid -->
+<div class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-4xl font-light text-center mb-20 text-gray-800">
+            Select Your <strong class="font-extrabold">Help Topic</strong>
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <!-- Box 1 -->
+            <div onclick="redirectSetup('wireless')" class="group border-2 border-gray-100 p-10 rounded-xl hover:shadow-2xl transition cursor-pointer text-center hover:border-[#005eb8]">
+                <div class="w-24 h-24 mx-auto bg-blue-50 text-[#005eb8] rounded-full flex items-center justify-center mb-8 text-4xl group-hover:bg-[#005eb8] group-hover:text-white transition">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Wireless Setup</h3>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Connect your device to a Wi-Fi network, computer, or mobile device.
+                </p>
+                <span class="text-[#005eb8] font-bold text-lg uppercase group-hover:underline">
+                    View Guide &rarr;
+                </span>
+            </div>
+
+            <!-- Box 2 -->
+            <div onclick="redirectSetup('offline')" class="group border-2 border-gray-100 p-10 rounded-xl hover:shadow-2xl transition cursor-pointer text-center hover:border-[#005eb8]">
+                <div class="w-24 h-24 mx-auto bg-blue-50 text-[#005eb8] rounded-full flex items-center justify-center mb-8 text-4xl group-hover:bg-[#005eb8] group-hover:text-white transition">
+                    <i class="fas fa-power-off"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Fix Offline Status</h3>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Troubleshoot devices showing “Offline” or “Paused” status on your PC.
+                </p>
+                <span class="text-[#005eb8] font-bold text-lg uppercase group-hover:underline">
+                    View Guide &rarr;
+                </span>
+            </div>
+
+            <!-- Box 3 -->
+            <div onclick="redirectSetup('software')" class="group border-2 border-gray-100 p-10 rounded-xl hover:shadow-2xl transition cursor-pointer text-center hover:border-[#005eb8]">
+                <div class="w-24 h-24 mx-auto bg-blue-50 text-[#005eb8] rounded-full flex items-center justify-center mb-8 text-4xl group-hover:bg-[#005eb8] group-hover:text-white transition">
+                    <i class="fas fa-download"></i>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">Software & Manuals</h3>
+                <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                    Locate specific software utilities and manuals for your model.
+                </p>
+                <span class="text-[#005eb8] font-bold text-lg uppercase group-hover:underline">
+                    View Guide &rarr;
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FAQ Section -->
+<div class="bg-gray-50 py-24 border-t">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">
+            Frequently Asked Questions
+        </h2>
+        
+        <div class="space-y-6">
+            <div class="bg-white border rounded-lg shadow-sm">
+                <details class="group">
+                    <summary class="flex justify-between items-center font-bold text-xl cursor-pointer list-none p-8">
+                        <span>Why is my printer connected to Wi-Fi but still offline?</span>
+                        <span class="transition group-open:rotate-180">
+                            <i class="fas fa-chevron-down text-gray-400"></i>
+                        </span>
+                    </summary>
+                    <div class="text-gray-700 px-8 pb-8 text-lg border-t pt-6 leading-relaxed">
+                        This often happens due to an IP address conflict or disabled status monitoring in the device settings.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-[#2c2c2c] text-white pt-16 pb-8 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-wider text-gray-400 text-sm">Products</h4>
+                <ul class="space-y-4 text-gray-300 text-base">
+                    <li><a href="#" class="hover:text-white">Printers & All-in-Ones</a></li>
+                    <li><a href="#" class="hover:text-white">Scanners</a></li>
+                    <li><a href="#" class="hover:text-white">Label Printers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-wider text-gray-400 text-sm">Help</h4>
+                <ul class="space-y-4 text-gray-300 text-base">
+                    <li><a href="#" class="hover:text-white">Software Downloads</a></li>
+                    <li><a href="#" class="hover:text-white">Manuals</a></li>
+                    <li><a href="#" class="hover:text-white">Troubleshooting</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-wider text-gray-400 text-sm">Services</h4>
+                <ul class="space-y-4 text-gray-300 text-base">
+                    <li><a href="#" class="hover:text-white">Remote Configuration</a></li>
+                    <li><a href="#" class="hover:text-white">Network Setup</a></li>
+                    <li><a href="#" class="hover:text-white">Consulting</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 uppercase tracking-wider text-gray-400 text-sm">Contact</h4>
+                <p class="text-gray-300 mb-2 text-base">Need help identifying your product?</p>
+                <div class="text-white font-bold text-3xl hover:text-blue-300">1-760-274-0601</div>
+                <p class="text-sm text-gray-500 mt-2">Available Mon-Fri 9AM-5PM</p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-700 pt-8 mt-8">
+            <p class="text-gray-500 text-xs leading-relaxed max-w-3xl">
+                <strong>Legal Disclaimer:</strong> Device Solutions Center is an independent, educational information platform that provides general setup guides, configuration tutorials, and troubleshooting information for printers and related devices. We do not offer repair, paid technical support, or hands-on services. We are not affiliated with, endorsed by, or associated with any printer manufacturer. Brand names and product references are used solely for educational and informational purposes to help users understand device setup and usage.
+            </p>
+
+            <div class="text-center mt-8 text-gray-600 text-xs">
+                &copy; 2026 Independent Device Solutions. All rights reserved.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+function startSetup() {
+  const model = document.getElementById('modelInput').value.trim();
+  if (model.length > 2) {
+    window.location.href = `setup-guide.html?model=${encodeURIComponent(model)}`;
+  } else {
+    alert("Please enter a valid model number.");
+  }
+}
+</script>
+
+</body>
+</html>

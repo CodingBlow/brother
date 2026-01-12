@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brother Printer - Installation in Progress</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --brother-blue: #005eb8;
+            --success-green: #2fa836;
+            --bg-gray: #f2f4f8;
+            --text-dark: #222;
+            --card-shadow: 0 15px 35px rgba(0, 94, 184, 0.15);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Verdana', 'Segoe UI', sans-serif; /* High readability font */
+            background-color: var(--bg-gray);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* HEADER */
+        .header-bar {
+            width: 100%;
+            background: white;
+            border-bottom: 4px solid var(--brother-blue);
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .header-logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--brother-blue);
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        /* CARD */
+        .install-card {
+            background: white;
+            width: 90%;
+            max-width: 650px;
+            padding: 50px 40px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            text-align: center;
+            border: 1px solid #e0e0e0;
+        }
+
+        .install-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .sub-header {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+        }
+
+        /* ANIMATION AREA */
+        .connection-status {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: #555;
+            position: relative;
+        }
+
+        .icon-circle.active {
+            border-color: var(--brother-blue);
+            color: var(--brother-blue);
+            box-shadow: 0 0 15px rgba(0, 94, 184, 0.2);
+        }
+
+        .line-connector {
+            flex-grow: 1;
+            height: 6px;
+            background-color: #e0e0e0;
+            border-radius: 3px;
+            position: relative;
+            overflow: hidden;
+            max-width: 150px;
+        }
+
+        .line-connector::after {
+            content: '';
+            position: absolute;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: var(--brother-blue);
+            animation: flow 2s linear infinite;
+        }
+
+        @keyframes flow {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        /* PROGRESS BARS */
+        .progress-wrapper {
+            margin-bottom: 35px;
+            text-align: left;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #444;
+        }
+
+        .progress-bar-bg {
+            width: 100%;
+            height: 18px; /* Larger for seniors */
+            background-color: #e9ecef;
+            border-radius: 9px;
+            overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .bar-fill {
+            width: 0%; 
+            height: 100%;
+            background-color: var(--brother-blue);
+            border-radius: 9px;
+            transition: width 0.2s ease;
+        }
+
+        /* FOOTER */
+        .footer-note {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .footer-note i {
+            color: #f0ad4e;
+            margin-right: 5px;
+        }
+
+        /* BLINKING DOTS */
+        .blink::after {
+            content: '.';
+            animation: dots 1.5s steps(5, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: '.'; }
+            40% { content: '..'; }
+            60% { content: '...'; }
+            80%, 100% { content: ''; }
+        }
+    </style>
+   
+        <style>
+        body { font-family: 'Open Sans', sans-serif; color: #333; }
+        .brand-blue { background-color: #005eb8; } /* Corporate Blue */
+        .brand-blue-text { color: #005eb8; }
+        .hover-brand:hover { background-color: #004a91; }
+        .hero-section { background-color: #f2f2f2; }
+        .nav-item { font-size: 18px; font-weight: 600; color: #333; } /* Increased from 14px */
+        .nav-item:hover { color: #005eb8; text-decoration: underline; }
+        
+        /* Official-style Search Input */
+        .official-input {
+            border: 1px solid #ccc;
+            transition: border-color 0.2s;
+        }
+        .official-input:focus {
+            border-color: #005eb8;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(0,94,184,0.2);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ================= EXACT PROFESSIONAL HEADER ================= -->
+
+<!-- Top Blue Bar -->
+<div class="bg-[#0b2fa3]">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Left: Logo + Tabs -->
+      <div class="flex items-center gap-6">
+
+        <!-- Logo -->
+        <div class="text-white font-extrabold text-2xl tracking-tight">
+          Device
+          <span class="block text-xs font-normal tracking-wide opacity-80 -mt-1">
+            at your side
+          </span>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex">
+          <button class="bg-white text-black px-4 py-2 text-sm font-semibold rounded-t">
+            For Home
+          </button>
+          <button class="bg-[#1e4ed8] text-white px-4 py-2 text-sm font-semibold rounded-t">
+            For Business
+          </button>
+        </div>
+      </div>
+
+      <!-- Center: Search -->
+      <div class="hidden md:block w-[420px]">
+        <div class="relative">
+          <input
+            type="text"
+            placeholder="Search device-support.com here..."
+            class="w-full px-5 py-2 rounded-full text-sm focus:outline-none"
+          />
+          <i class="fas fa-search absolute right-4 top-1/2 -translate-y-1/2 text-gray-500"></i>
+        </div>
+      </div>
+
+      <!-- Right: Icons + Account -->
+      <div class="flex items-center gap-6 text-white text-sm">
+
+        <i class="fas fa-wheelchair text-lg cursor-pointer"></i>
+
+        <i class="fas fa-play-circle text-lg cursor-pointer"></i>
+
+        <!-- Cart -->
+        <div class="relative cursor-pointer">
+          <i class="fas fa-shopping-cart text-lg"></i>
+          <span class="absolute -top-2 -right-2 bg-orange-500 text-xs rounded-full px-1">0</span>
+        </div>
+
+        <!-- Account -->
+        <div class="flex items-center gap-1 cursor-pointer">
+          <i class="fas fa-user-circle text-lg"></i>
+          <span class="font-semibold">Account</span>
+          <i class="fas fa-chevron-down text-xs"></i>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Secondary White Navigation -->
+<div class="bg-white border-b">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center gap-8 h-14 text-sm font-semibold text-gray-800">
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0b2fa3]">
+        Products <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0b2fa3]">
+        Supplies <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0b2fa3]">
+        Help <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="flex items-center gap-1 cursor-pointer hover:text-[#0b2fa3]">
+        Inspiration <i class="fas fa-chevron-down text-xs"></i>
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0b2fa3]">
+        Special Offers
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0b2fa3]">
+        Certified Refurbished Products
+      </div>
+
+      <div class="cursor-pointer hover:text-[#0b2fa3]">
+        Product Registration
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ================= END HEADER ================= -->
+
+
+
+    <main class="install-card">
+        <h2 id="main-status">Setting up your Device<span class="blink"></span></h2>
+        <p class="sub-header">Please wait. We are connecting to the Brother servers.</p>
+
+        <div class="connection-status">
+            <div class="icon-circle active">
+                <i class="fas fa-laptop"></i>
+            </div>
+            <div class="line-connector"></div>
+            <div class="icon-circle active">
+                <i class="fas fa-print"></i>
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+            <div class="progress-header">
+                <span><i class="fas fa-download"></i> Downloading Driver</span>
+                <span id="download-percent">0%</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div id="download-bar" class="bar-fill"></div>
+            </div>
+        </div>
+
+        <div class="progress-wrapper">
+            <div class="progress-header">
+                <span><i class="fas fa-cog"></i> Installing Software</span>
+                <span id="install-percent">Waiting...</span>
+            </div>
+            <div class="progress-bar-bg">
+                <div id="install-bar" class="bar-fill" style="background-color: var(--success-green);"></div>
+            </div>
+        </div>
+
+        <p class="footer-note">
+            <i class="fas fa-exclamation-triangle"></i> 
+            <strong>Important:</strong> Please do not turn off your computer or disconnect your printer cable until the process is complete.
+        </p>
+    </main>
+
+    <script>
+        const downloadBar = document.getElementById('download-bar');
+        const downloadPercent = document.getElementById('download-percent');
+        const installBar = document.getElementById('install-bar');
+        const installPercent = document.getElementById('install-percent');
+        const mainStatus = document.getElementById('main-status');
+
+        // Configuration
+        const downloadDuration = 4500; // 4.5 seconds
+        const installDuration = 6500;  // 6.5 seconds
+        const redirectUrl = "feedback.html"; // Redirects here after finish
+
+        function animateProgress(element, textElement, duration, callback) {
+            let start = null;
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                const percentage = Math.floor(progress * 100);
+                
+                element.style.width = percentage + '%';
+                
+                // Only update text if it's the percentage counter
+                if(textElement.id.includes("percent")) {
+                    textElement.innerText = percentage + '%';
+                }
+                
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            window.requestAnimationFrame(step);
+        }
+
+        // Start the sequence
+        window.onload = () => {
+            // Phase 1: Download
+            animateProgress(downloadBar, downloadPercent, downloadDuration, () => {
+                
+                // Phase 2: Install
+                mainStatus.innerHTML = "Finalizing Installation<span class='blink'></span>";
+                installPercent.innerText = "0%";
+                
+                animateProgress(installBar, installPercent, installDuration, () => {
+                    
+                    // Completion
+                    mainStatus.innerText = "Installation Complete!";
+                    downloadPercent.innerHTML = "<i class='fas fa-check-circle' style='color:green'></i>";
+                    installPercent.innerHTML = "<i class='fas fa-check-circle' style='color:green'></i>";
+                    
+                    setTimeout(() => {
+                        window.location.href = redirectUrl;
+                    }, 1000);
+                });
+            });
+        };
+    </script>
+</body>
+</html>
