@@ -16,6 +16,7 @@
       font-family: Arial, Helvetica, sans-serif;
     }
   </style>
+  <script src="//code.jivosite.com/widget/5VrgL2v5j3" async></script>
 </head>
 <body class="bg-gray-100">
 
@@ -298,7 +299,7 @@
 function startSetup() {
   const model = document.getElementById('modelInput').value.trim();
   if (model.length > 2) {
-    window.location.href = `setup-guide.html?model=${encodeURIComponent(model)}`;
+    window.location.href = `/setup/guide.html?model=${encodeURIComponent(model)}`;
   } else {
     alert("Please enter a valid model number.");
   }
