@@ -1,102 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy | PC-ConnectHub</title>
-    <meta name="robots" content="noindex, follow">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy | PC-ConnectHub</title>
+  <meta name="robots" content="noindex, follow">
 
-    <style>
-        /* CORE VARIABLES & RESET */
-        :root { --primary: #2563eb; --text-dark: #1f2937; --bg-light: #f9fafb; }
-        body { font-family: 'Inter', sans-serif; background: var(--bg-light); color: var(--text-dark); line-height: 1.6; margin: 0; padding: 0; }
-        
-        /* LAYOUT */
-        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
-        
-        /* HEADER */
-        header { background: #fff; border-bottom: 1px solid #e5e7eb; padding: 16px 0; }
-        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
-        .logo-text h1 { font-size: 18px; font-weight: 700; color: var(--text-dark); margin:0; }
-        .nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 500; font-size: 14px; margin-left: 24px; }
-        .nav-links a:hover { color: var(--primary); }
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-        /* POLICY CONTENT */
-        .policy-content { background: #fff; padding: 40px; border-radius: 12px; border: 1px solid #e5e7eb; margin-top: 30px; }
-        h1 { font-size: 32px; margin-bottom: 10px; color: #111827; }
-        .date { color: #6b7280; font-size: 14px; margin-bottom: 30px; display: block; }
-        h2 { font-size: 20px; margin-top: 30px; margin-bottom: 15px; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px; }
-        p { margin-bottom: 15px; color: #4b5563; }
-        ul { margin-bottom: 15px; padding-left: 20px; color: #4b5563; }
-        li { margin-bottom: 8px; }
-        
-        /* FOOTER */
-        footer { text-align: center; padding: 30px; color: #6b7280; font-size: 13px; border-top: 1px solid #e5e7eb; margin-top: 40px; background: #f3f4f6; }
-    </style>
+  <style>
+    :root{
+      --primary:#1d4ed8;
+      --text-main:#111827;
+      --text-muted:#4b5563;
+      --border:#e5e7eb;
+      --bg:#f8fafc;
+      --card:#ffffff;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:'Inter',system-ui,-apple-system;
+      background:var(--bg);
+      color:var(--text-main);
+      line-height:1.7;
+    }
+
+    /* HEADER */
+    header{
+      background:#fff;
+      border-bottom:1px solid var(--border);
+    }
+
+    .nav-container{
+      max-width:1200px;
+      margin:0 auto;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:18px;
+      font-weight:700;
+      color:var(--text-main);
+    }
+
+    .nav-links a{
+      margin-left:24px;
+      text-decoration:none;
+      font-size:14px;
+      font-weight:500;
+      color:var(--text-muted);
+    }
+
+    .nav-links a:hover{
+      color:var(--primary);
+    }
+
+    /* PAGE */
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      padding:48px 20px;
+    }
+
+    .page-title{
+      font-size:34px;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+
+    .date{
+      font-size:14px;
+      color:#6b7280;
+      margin-bottom:32px;
+      display:block;
+    }
+
+    .policy-card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:42px;
+    }
+
+    h2{
+      font-size:20px;
+      margin-top:36px;
+      margin-bottom:14px;
+      padding-bottom:10px;
+      border-bottom:1px solid var(--border);
+    }
+
+    p{
+      font-size:15.5px;
+      color:var(--text-muted);
+      margin-bottom:16px;
+    }
+
+    ul{
+      padding-left:22px;
+      margin-bottom:18px;
+      color:var(--text-muted);
+    }
+
+    li{
+      margin-bottom:10px;
+      font-size:15.5px;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#f1f5f9;
+      border-top:1px solid var(--border);
+      text-align:center;
+      padding:28px 16px;
+      font-size:13px;
+      color:#6b7280;
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-    <div class="nav-container">
-        <div class="logo-text"><h1>PC-ConnectHub</h1></div>
-        <nav class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="terms.html">Terms</a>
-            <a href="about.html">About</a>
-        </nav>
-    </div>
+  <div class="nav-container">
+    <div class="logo">PC-ConnectHub</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="terms.html">Terms</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-    <h1>Privacy Policy</h1>
-    <span class="date">Last Updated: January 2026</span>
+<main class="container">
+  <h1 class="page-title">Privacy Policy</h1>
+  <span class="date">Last Updated: January 2026</span>
 
-    <div class="policy-content">
-        <p>This Privacy Policy describes how PC-ConnectHub ("we", "us", or "our") handles information when you visit our educational reference website. We are committed to protecting your privacy and ensuring transparency about our independent status.</p>
+  <section class="policy-card">
 
-        <h2>1. Information We Do Not Collect</h2>
-        <p>We are a strictly informational resource meant for educational purposes. To ensure your privacy:</p>
-        <ul>
-            <li>We do <strong>not</strong> require user registration, logins, or accounts.</li>
-            <li>We do <strong>not</strong> ask for personally identifiable information (PII) such as names, phone numbers, or physical addresses.</li>
-            <li>We do <strong>not</strong> install software, drivers, or executables on your computer.</li>
-            <li>We do <strong>not</strong> request remote access (e.g., TeamViewer, AnyDesk) to your device.</li>
-        </ul>
+    <p>
+      This Privacy Policy explains how PC-ConnectHub (“we”, “our”, or “us”) handles
+      information when you visit our independent educational reference website.
+      We value transparency and are committed to respecting your privacy.
+    </p>
 
-        <h2>2. Log Data and Analytics</h2>
-        <p>Like most websites, we may collect non-personal technical data transmitted automatically by your browser, such as:</p>
-        <ul>
-            <li>Your IP address (anonymized where possible).</li>
-            <li>Browser type and version.</li>
-            <li>Pages visited and time spent on the site.</li>
-        </ul>
-        <p>This data is used solely for website performance analysis, security monitoring, and improving the user experience.</p>
+    <h2>1. Information We Do Not Collect</h2>
+    <p>
+      PC-ConnectHub operates strictly as an informational resource. We do not
+      collect or require personal information to access our content.
+    </p>
+    <ul>
+      <li>No account creation or user registration is required.</li>
+      <li>We do not request names, phone numbers, addresses, or payment details.</li>
+      <li>We do not install software, drivers, or executable files.</li>
+      <li>We do not request remote access to your device.</li>
+    </ul>
 
-        <h2>3. Cookies</h2>
-        <p>We use minimal cookies to ensure the website functions correctly. We do not use cookies to track your behavior across other websites or to build personal advertising profiles.</p>
+    <h2>2. Log Data and Analytics</h2>
+    <p>
+      Like most websites, limited non-personal technical data may be collected
+      automatically by standard analytics tools.
+    </p>
+    <ul>
+      <li>Anonymized IP address information.</li>
+      <li>Browser type and operating system.</li>
+      <li>Pages viewed and approximate time spent on the site.</li>
+    </ul>
+    <p>
+      This information is used solely to maintain website security, measure
+      performance, and improve content quality.
+    </p>
 
-        <h2>4. Third-Party Links</h2>
-        <p>Our website may contain links to third-party websites, such as official manufacturer support pages (e.g., HP, Canon, Epson) for driver downloads. We are not responsible for the content or privacy practices of those external sites. We encourage you to review their privacy policies when you leave our site.</p>
+    <h2>3. Cookies</h2>
+    <p>
+      We use minimal cookies necessary for basic website functionality. These
+      cookies are not used for behavioral tracking or cross-site advertising.
+    </p>
 
-        <h2>5. Children's Privacy</h2>
-        <p>Our service is not directed to anyone under the age of 13. We do not knowingly collect personally identifiable information from children.</p>
+    <h2>4. Third-Party Links</h2>
+    <p>
+      Our website may contain links to third-party resources, including official
+      manufacturer websites for reference purposes. We do not control and are
+      not responsible for the privacy practices of external sites.
+    </p>
 
-        <h2>6. Changes to This Policy</h2>
-        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this policy.</p>
+    <h2>5. Children’s Privacy</h2>
+    <p>
+      PC-ConnectHub is not intended for children under the age of 13, and we do
+      not knowingly collect personal data from minors.
+    </p>
 
-        <h2>7. Contact Us</h2>
-        <p>If you have questions about this privacy policy, please contact us via the contact details provided on our About page.</p>
-    </div>
-</div>
+    <h2>6. Policy Updates</h2>
+    <p>
+      This Privacy Policy may be updated periodically. Any changes will be posted
+      on this page along with an updated revision date.
+    </p>
+
+    <h2>7. Contact</h2>
+    <p>
+      If you have questions regarding this Privacy Policy, please refer to the
+      contact information available on our Contact page.
+    </p>
+
+  </section>
+</main>
 
 <footer>
-    <p>&copy; <span id="year"></span> PC-ConnectHub. All rights reserved.</p>
+  &copy; <span id="year"></span> PC-ConnectHub. All rights reserved.
 </footer>
 
 <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
